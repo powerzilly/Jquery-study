@@ -9,17 +9,20 @@
     </head>
     <body>
         <script>
-            function evidenziaSelettore(selettore){
-                $("#contenitore *").css("background-color","");
-                $("#contenitore "+selettore).css("background-color","yellow");
-            }
+            function appendiVuoto(){
+				$("<div />").appendTo("#contenitore");
+			}
+			
+			function appendiPieno(){
+				$("<div><h2>Bella Storia</h2></div>").appendTo("#contenitore");
+			}
         </script>
         <h1>Esempi Selettori Gerarchici </h1>
         <p>&nbsp;</p>
         <p>Selettore passato alla funzione <em>evidenzia</em>: </p>
         <ul>
-          <li><a href="javascript:evidenziaSelettore('#menu li');">&quot;#menu li&quot;</a></li>
-          <li><a href="javascript:evidenziaSelettore('#menu > li');">&quot;#menu &gt;li&quot;</a></li>
+          <li><a href="javascript:appendiVuoto();">&quot;#menu li&quot;</a></li>
+          <li><a href="javascript:appendiPieno();">&quot;#menu &gt;li&quot;</a></li>
         </ul>
         <p>&nbsp;</p>
         <div id="contenitore"><ul id="menu" style="width:20%"><li>Voce di menu 1 </li>
