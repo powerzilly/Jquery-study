@@ -1,5 +1,11 @@
-*{
-    whidth:0; 
-    heigth:0;
+ul {
+	list-style-type: disc;
+	padding: 10px;
+	background-color:#FFFFFF;
+}
+    ul li {
+	margin-top: 3px;
+	margin-bottom: 3px;
+	line-height: 16px;
 }
     
