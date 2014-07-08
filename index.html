@@ -16,13 +16,24 @@
 			function appendiPieno(){
 				$("<div><h2>Bella Storia</h2></div>").appendTo("#contenitore");
 			}
-			
+			$(function(){
+				alert("DOM cariato!!!");
+			})
+			function selettore(){
+				$("#contenitore *").css("background-color","");
+				$("ul#menu li").css("background-color","red");
+			}
+			function selettoreDue(){
+				$("#contenitore *").css("background-color","");
+				$("ul#menu > li").css("background-color","yellow");
+			}
         </script>
         <h1>Esempi Selettori Gerarchici </h1>
         <p>&nbsp;</p>
         <p>Selettore passato alla funzione <em>evidenzia</em>: </p>
         <ul>
-          <li><a href="javascript:appendiVuoto();">&quot;#menu li&quot;</a></li>
+		  <li><a href="javascript:selettore();">selettore</a></li>
+          <li><a href="javascript:selettoreDue();">&quot;#menu li&quot;</a></li>
           <li><a href="javascript:appendiPieno();">&quot;#menu &gt;li&quot;</a></li>
         </ul>
         <p>&nbsp;</p>
