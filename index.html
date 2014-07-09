@@ -22,24 +22,26 @@
                 });
                 alert(testo);
             }
+            function linkuno(){
+               return $("#link > a").attr("href");
+              
+            }
+            
+            $(function(){
+                alert(linkuno());
+                $("a#linkUno").removeAttr("href");
+            })
+            
+            
                 
           
         </script>
         <body>
-        <h1>Esempi Metodi di base </h1>
-        <p>&nbsp;</p>
-
-        <ul>
-          <li><a href="javascript:indice_primo();">Indice del sottomenu con id &quot;primo&quot;</a></li>
-          <li><a href="javascript:testo_lista();">Testo di tutte le liste con indicato l'indice di ogni elemento </a></li>
-        </ul>
-        <p>&nbsp;</p>
-        <div id="contenitore"><ul id="menu" style="width:20%">
-          <li id="primo">Voce di menu 1</li>
-            <li>Voce di menu 2</li>
-            <li>Voce di menu 3 </li>
-          </ul>
-        </div>
+        <h1>Metodi per gli attributi</h1>
+            <div id="link">
+                <a id="linkUno" href="http://www.google.it">Google</a>
+                <a class="linkDue" href="http://www.youtube.com">Youtube</a>
+            </div>
         </body>
     </html>
     
