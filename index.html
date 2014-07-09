@@ -7,51 +7,39 @@
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
 
     </head>
-    <body>
         <script>
-            function appendiVuoto(){
-				$("<div />").appendTo("#contenitore");
-			}  
-			
-			function appendiPieno(){
-				$("<div><h2>Bella Storia</h2></div>").appendTo("#contenitore");
-			}
-			$(function(){
-				alert("DOM cariato!!!");
-			})
-			function selettore(){
-				$("#contenitore *").css("background-color","");
-				$("ul#menu li").css("background-color","red");
-			}
-			function selettoreDue(){
-				$("#contenitore *").css("background-color","");
-				$("ul#menu > li").css("background-color","yellow");
-			}
+            function indice_primo(){
+                alert("Indice del sottomenù con id primo "+$("#menu li").index($("#primo")));
+            }
+            
+            function testo_lista(){
+                var testo = "";
+                $("#menu li").each(function(i,el){
+                    testo += i;
+                    testo += ": ";
+                    testo += $(el).text();
+                    testo += "\n";
+                });
+                alert(testo);
+            }
+                
+          
         </script>
-        <h1>Esempi Selettori Gerarchici </h1>
+        <body>
+        <h1>Esempi Metodi di base </h1>
         <p>&nbsp;</p>
-        <p>Selettore passato alla funzione <em>evidenzia</em>: </p>
+
         <ul>
-		  <li><a href="javascript:selettore();">selettore</a></li>
-          <li><a href="javascript:selettoreDue();">&quot;#menu li&quot;</a></li>
-          <li><a href="javascript:appendiPieno();">&quot;#menu &gt;li&quot;</a></li>
+          <li><a href="javascript:indice_primo();">Indice del sottomenu con id &quot;primo&quot;</a></li>
+          <li><a href="javascript:testo_lista();">Testo di tutte le liste con indicato l'indice di ogni elemento </a></li>
         </ul>
         <p>&nbsp;</p>
-        <div id="contenitore"><ul id="menu" style="width:20%"><li>Voce di menu 1 </li>
-            <li>Voce di menu 2
-              <ul>
-                <li>Voce di sottomenu 1 </li>
-                <li>Voce di sottomenu 2 </li>
-              </ul>
-            </li>
+        <div id="contenitore"><ul id="menu" style="width:20%">
+          <li id="primo">Voce di menu 1</li>
+            <li>Voce di menu 2</li>
             <li>Voce di menu 3 </li>
           </ul>
         </div>
-            <p>&nbsp;</p>
-            <h3>Codice:</h3>
-            <p>&nbsp;</p>
-        
-        
-    </body>
+        </body>
     </html>
     
