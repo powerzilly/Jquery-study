@@ -8,36 +8,11 @@
 
     </head>
         <script>
-            function indice_primo(){
-                alert("Indice del sottomenù con id primo "+$("#menu li").index($("#primo")));
-            }
-            
-            function testo_lista(){
-                var testo = "";
-                $("#menu li").each(function(i,el){
-                    testo += i;
-                    testo += ": ";
-                    testo += $(el).text();
-                    testo += "\n";
-                });
-                alert(testo);
-            }
-            function linkuno(){
-               return $("#link > a").attr("href");
-              
-            }
-            
-            $(function(){
-                alert(linkuno());
-                $("a#linkUno").removeAttr("href");
-            })
-            
-            
-                
-          
+           
+                  
         </script>
         <body>
-        <h1>Metodi per gli attributi</h1>
+        <h1>Gestione delle classi</h1>
             <div id="link">
                 <a id="linkUno" href="http://www.google.it">Google</a>
                 <a class="linkDue" href="http://www.youtube.com">Youtube</a>
